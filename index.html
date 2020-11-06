@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depenses</title>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>Gestionnaire de dépenses</ion-title>
+                <ion-buttons slot="end">
+                    <ion-button>
+                        <ion-icon slot="icon-only" name="american-football-outline"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title>Nouvelle dépense</ion-card-title>
+                                <ion-card-subtitle>By Nidhal</ion-card-title>
+            
+                            </ion-card-header>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label position="floating">Intitulé de la dépense</ion-label>
+                                    <ion-input type="text" id="intitule"></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Somme dépensée</ion-label>
+                                    <ion-input type="number" id="somme"></ion-input>
+                                </ion-item>
+                            </ion-card-content>
+                            <div class="ion-margin-vertical ion-text-end">
+                                <ion-button color="danger" fill="outline" id="btn-cancel">
+                                    <ion-icon slot="start" name="close-outline"></ion-icon>
+                                    Effacer
+                                </ion-button>
+                                <ion-button color="success" fill="outline" id="btn-submit">
+                                    <ion-icon slot="start" name="add-outline"></ion-icon>
+                                    Ajouter
+                                </ion-button>
+                            </div>
+                        </ion-card> 
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-list id="depenses-list"></ion-list>
+                    </ion-col>
+
+                </ion-row>
+            </ion-grid>
+                            
+        </ion-content>
+    </ion-app>
+    <script src="app.js"></script>
+</body>
+
+</html>
